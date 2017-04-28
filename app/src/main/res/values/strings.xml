@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Zepplin2</string>
+    <string name="header">Discover</string>
+    <string name="explore_paris">Explore Paris</string>
+    <string name="paris">Paris</string>
+    <string name="discover">Discover</string>
+    <string name="map">Map</string>
+    <string name="my_posts">My Posts</string>
+    <string name="requests">Requests</string>
+    <string name="mynetwork">My Network</string>
+    <string name="search_text">Where would you like to connect?</string>
+    <string name="name_placeholder"><b>DummyName</b></string>
+    <string name="reviews">Reviews</string>
+    <string name="no_placeholder">XXXX</string>
+    <string name="time_placeholder">Xd Xh left</string>
+
+</resources>

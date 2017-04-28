@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rahulkapoor.zepplin2.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        >
+    <include
+        layout="@layout/fragment_search"
+        />
+    </LinearLayout>
+
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:name=""
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:weightSum="1"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="horizontal"
+            >
+
+           <ImageView
+               style="@style/ImageViewItem"
+               android:src="@drawable/discover_icon"
+               />
+
+            <ImageView
+                style="@style/ImageViewItem"
+                android:src="@drawable/map"
+                />
+            <ImageView
+                style="@style/ImageViewItem"
+                android:src="@drawable/my_post"
+                />
+            <ImageView
+                style="@style/ImageViewItem"
+                android:src="@drawable/request"
+                />
+            <ImageView
+                style="@style/ImageViewItem"
+                android:src="@drawable/my_network"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            >
+
+            <TextView
+                style="@style/TextViewItem"
+                android:text="@string/discover"
+                 />
+
+            <TextView
+                style="@style/TextViewItem"
+                android:text="@string/map"
+                />
+
+            <TextView
+                style="@style/TextViewItem"
+                android:text="@string/my_posts"
+                />
+
+            <TextView
+                style="@style/TextViewItem"
+                android:text="@string/requests"
+                />
+
+            <TextView
+                style="@style/TextViewItem"
+                android:text="@string/mynetwork"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+

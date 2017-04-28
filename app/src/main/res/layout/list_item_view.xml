@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:id="@+id/fl_screen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frame_height"
+        android:background="@drawable/paris">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="#993a4245"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_explore_paris"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:gravity="center"
+                android:text="@string/explore_paris"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/header_size"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_paris"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:gravity="center"
+                android:text="@string/paris"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/header_size"
+
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:layout_toStartOf="@id/tv_paris"
+                android:src="@drawable/map" />
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fl_screen">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="@dimen/margin_start_end"
+            android:src="@drawable/add_image_icon" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="@dimen/margin_start_end"
+            android:layout_toEndOf="@id/iv_icon"
+            android:text="@string/name_placeholder"
+            android:textColor="@android:color/black" />
+
+        <RatingBar
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="@dimen/margin_start_end"
+            android:layout_toEndOf="@id/iv_icon"
+            android:isIndicator="false"
+            android:numStars="5" />
+
+        <TextView
+            android:id="@+id/tv_reviews"
+            style="@style/textStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="@dimen/margin_start_end"
+            android:text="@string/reviews" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            style="@style/textStyle"
+            android:layout_toStartOf="@id/tv_reviews"
+            android:text="@string/no_placeholder"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="@dimen/margin_start_end"
+            />
+
+        <ImageView
+            android:id="@+id/ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reviews"
+            android:layout_toStartOf="@id/tv_rating"
+            android:layout_marginTop="@dimen/margin_start_end"
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/textStyle"
+            android:layout_toStartOf="@id/ratings"
+            android:layout_marginTop="@dimen/margin_start_end"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginEnd="@dimen/margin_start_end"
+            android:text="@string/time_placeholder"
+             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time_1"
+            android:layout_toStartOf="@id/tv_time"
+            android:layout_marginTop="@dimen/margin_start_end"
+            />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
