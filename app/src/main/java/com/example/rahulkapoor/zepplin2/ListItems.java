@@ -9,8 +9,15 @@ public class ListItems {
     private String mUsername;
     private String mDescribe;
     private String mTime;
-    private int mReviews;
+    private String mReviews;
 
+    public ListItems(final String username,final String time, final String review, final String describe){
+        this.mUsername = username;
+        this.mDescribe = describe;
+        this.mTime = time;
+        this.mReviews = review;
+
+    }
 
     public String getmUsername(){
 
@@ -27,7 +34,7 @@ public class ListItems {
         return mDescribe;
     }
 
-    public int getmReviews(){
+    public String getmReviews(){
 
         return mReviews;
     }

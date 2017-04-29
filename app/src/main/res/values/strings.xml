@@ -13,5 +13,16 @@
     <string name="reviews">Reviews</string>
     <string name="no_placeholder">XXXX</string>
     <string name="time_placeholder">Xd Xh left</string>
+    <string name="description">placeholder text</string>
+
+    <string name="username">John</string>
+    <string name="city">Paris</string>
+    <string name="home">Home</string>
+    <string name="cards">Cards/Subscription</string>
+    <string name="support">Support</string>
+    <string name="request">My Request</string>
+    <string name="share">Share</string>
+    <string name="logout">Logout</string>
+
 
 </resources>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="1">
 
     <FrameLayout
         android:id="@+id/fl_screen"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/frame_height"
+        android:layout_height="wrap_content"
         android:background="@drawable/paris">
 
         <RelativeLayout
@@ -59,7 +60,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/fl_screen">
 
         <ImageView
@@ -81,6 +82,7 @@
             android:textColor="@android:color/black" />
 
         <RatingBar
+            android:theme="@style/RatingBar"
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,17 +94,18 @@
             android:numStars="5" />
 
         <TextView
-            android:id="@+id/tv_reviews"
+            android:id="@+id/tv_reviews1"
             style="@style/textStyle"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginEnd="@dimen/margin_start_end"
             android:layout_marginTop="@dimen/margin_start_end"
             android:text="@string/reviews" />
 
         <TextView
-            android:id="@+id/tv_rating"
+            android:id="@+id/tv_reviews2"
             style="@style/textStyle"
-            android:layout_toStartOf="@id/tv_reviews"
+            android:layout_toStartOf="@id/tv_reviews1"
             android:text="@string/no_placeholder"
             android:layout_marginStart="@dimen/margin_start_end"
             android:layout_marginTop="@dimen/margin_start_end"
@@ -113,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/reviews"
-            android:layout_toStartOf="@id/tv_rating"
+            android:layout_toStartOf="@id/tv_reviews2"
             android:layout_marginTop="@dimen/margin_start_end"
             />
 
@@ -135,6 +138,17 @@
             android:layout_marginTop="@dimen/margin_start_end"
             />
 
+        <TextView
+            android:id="@+id/et_user_describe"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:layout_below="@id/iv_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textSize="@dimen/describe_size"
+            />
 
 
     </RelativeLayout>

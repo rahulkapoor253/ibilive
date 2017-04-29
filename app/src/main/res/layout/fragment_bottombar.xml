@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.15"
+    android:background="@color/colorPrimaryDark"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/iv_discover"
+            style="@style/ImageViewItem"
+            android:src="@drawable/discover_icon"
+            />
+
+        <ImageView
+            android:id="@+id/iv_maps"
+            style="@style/ImageViewItem"
+            android:src="@drawable/map"
+            />
+        <ImageView
+            android:id="@+id/iv_posts"
+            style="@style/ImageViewItem"
+            android:src="@drawable/my_post"
+            />
+        <ImageView
+            android:id="@+id/iv_request"
+            style="@style/ImageViewItem"
+            android:src="@drawable/request"
+            />
+        <ImageView
+            android:id="@+id/iv_network"
+            style="@style/ImageViewItem"
+            android:src="@drawable/my_network"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        >
+
+        <TextView
+            style="@style/TextViewItem"
+            android:text="@string/discover"
+            />
+
+        <TextView
+            style="@style/TextViewItem"
+            android:text="@string/map"
+            />
+
+        <TextView
+            style="@style/TextViewItem"
+            android:text="@string/my_posts"
+            />
+
+        <TextView
+            style="@style/TextViewItem"
+            android:text="@string/requests"
+            />
+
+        <TextView
+            style="@style/TextViewItem"
+            android:text="@string/mynetwork"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

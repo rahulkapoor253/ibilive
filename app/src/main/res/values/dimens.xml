@@ -8,4 +8,10 @@
     <dimen name="dimen_top_bottom">40dp</dimen>
     <dimen name="header_height">60dp</dimen>
     <dimen name="frame_height">400dp</dimen>
+    <dimen name="describe_size">14sp</dimen>
+    <dimen name="search_bar">30dp</dimen>
+    <dimen name="sidemenu_text">18sp</dimen>
+    <dimen name="sidemenu_margin_end">14dp</dimen>
+    <string name="sidemenu_margin_start">15dp</string>
+
 </resources>

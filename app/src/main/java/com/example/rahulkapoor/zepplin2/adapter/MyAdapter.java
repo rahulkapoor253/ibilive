@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.rahulkapoor.zepplin2.ListItems;
 import com.example.rahulkapoor.zepplin2.R;
@@ -18,10 +20,15 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private ArrayList<ListItems> mDataArrayList;
-    private Context mContext;
+
+    public MyAdapter(ArrayList<ListItems> data){
+
+        this.mDataArrayList = data;
+
+    }
 
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_view, parent, false);
 
@@ -30,8 +37,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
+        ListItems obj = mDataArrayList.get(position);
+
+        holder.mUsername.setText(obj.getmUsername());
+        holder.mReviews.setText(obj.getmReviews());
+holder.mTime.setText(obj.getmTime());
+        holder.mDescription.setText(obj.getmDescribe());
 
     }
 
@@ -40,11 +53,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         return mDataArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ViewHolder(Context context) {
-            super(context);
+        private TextView mDescription;
+        private TextView mTime;
+        private TextView mReviews;
+        private TextView mUsername;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            mUsername = (TextView) itemView.findViewById(R.id.tv_username);
+            mDescription = (TextView) itemView.findViewById(R.id.et_user_describe);
+            mTime = (TextView) itemView.findViewById(R.id.tv_time);
+            mReviews = (TextView) itemView.findViewById(R.id.tv_reviews2);
+
         }
+
 
 
     }
