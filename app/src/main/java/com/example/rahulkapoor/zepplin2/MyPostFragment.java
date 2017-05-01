@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 
 import com.example.rahulkapoor.zepplin2.Constant.AppConstants;
 import com.example.rahulkapoor.zepplin2.adapter.MyAdapterDiscoverPost;
+import com.example.rahulkapoor.zepplin2.model.ListItems;
+
+import java.util.ArrayList;
 
 /**
  * Created by rahulkapoor on 30/04/17.
@@ -20,6 +23,7 @@ import com.example.rahulkapoor.zepplin2.adapter.MyAdapterDiscoverPost;
 public class MyPostFragment extends Fragment implements AppConstants {
 
     private RecyclerView mRecyclerView;
+    private ArrayList<ListItems> mDataArrayList;
     private MyAdapterDiscoverPost adapter;
     private String mCheck;
     private MyPostFragment frag;
@@ -44,7 +48,23 @@ public class MyPostFragment extends Fragment implements AppConstants {
 
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        adapter = new MyAdapterDiscoverPost(getArguments().getInt("POST_MODE"));
+
+        mDataArrayList = new ArrayList<>();
+
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
+                "dolor sit amet, consectetur lorem ipsum." ));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
+                "dolor sit amet, consectetur lorem ipsum." ));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
+                "dolor sit amet, consectetur lorem ipsum." ));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
+                "dolor sit amet, consectetur lorem ipsum." ));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
+                "dolor sit amet, consectetur lorem ipsum." ));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
+                "dolor sit amet, consectetur lorem ipsum." ));
+
+        adapter = new MyAdapterDiscoverPost(mDataArrayList, getArguments().getInt("POST_MODE"));
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 

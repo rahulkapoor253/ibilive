@@ -111,6 +111,7 @@
             android:textColor="@android:color/black" />
 
         <RatingBar
+            android:id="@+id/rating_bar"
             android:theme="@style/RatingBar"
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
@@ -180,8 +181,11 @@
             />
 
 
-
     </RelativeLayout>
+
+
+
+
 
     <Switch
         android:id="@+id/toggle"

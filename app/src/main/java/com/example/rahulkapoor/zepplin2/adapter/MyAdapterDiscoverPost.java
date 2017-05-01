@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -26,17 +27,12 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
     private View itemView;
 
     public MyAdapterDiscoverPost(ArrayList<ListItems> data, int mode){
-
         Log.d("log", "parametrized array list fired");
         this.mDataArrayList = data;
         this.MODE = mode;
 
     }
 
-    public MyAdapterDiscoverPost(int mode){
-        this.MODE = mode;
-
-    }
 
 
     @Override
@@ -77,6 +73,7 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
         private TextView mUsername;
         private Switch mSwitch;
         private ImageView mEdit, mBin, mLocator, mIcon ;
+        private RatingBar mRatingBar;
 
         public ViewHolder(View itemView,int val) {
             super(itemView);
@@ -90,15 +87,16 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
             }
 
            else if(val == POST_MODE){
-                mIcon.setVisibility(View.GONE);
+                mIcon.setVisibility(View.INVISIBLE);
                 mLocator.setVisibility(View.GONE);
-                mIcon.setVisibility(View.GONE);
-                mUsername.setVisibility(View.GONE);
+                mUsername.setVisibility(View.INVISIBLE);
+                mRatingBar.setVisibility(View.INVISIBLE);
             }
 
         }
 
         private void init(){
+            mRatingBar = (RatingBar) itemView.findViewById(R.id.rating_bar);
             mUsername = (TextView) itemView.findViewById(R.id.tv_username);
             mDescription = (TextView) itemView.findViewById(R.id.et_user_describe);
             mTime = (TextView) itemView.findViewById(R.id.tv_time);
