@@ -1,4 +1,4 @@
-package com.example.rahulkapoor.zepplin2;
+package com.example.rahulkapoor.zepplin2.model;
 
 /**
  * Created by rahulkapoor on 28/04/17.

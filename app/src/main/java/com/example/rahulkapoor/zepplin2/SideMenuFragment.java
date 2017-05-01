@@ -7,11 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.rahulkapoor.zepplin2.Constant.AppConstants;
+
 /**
  * Created by rahulkapoor on 29/04/17.
  */
 
-public class SideMenuFragment extends Fragment {
+public class SideMenuFragment extends Fragment implements AppConstants {
 
     @Nullable
     @Override

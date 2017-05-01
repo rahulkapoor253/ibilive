@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="0.15"
-    android:background="@color/colorPrimaryDark"
+    android:layout_weight="0.1"
+    android:background="@color/colorPrimary"
     >
 
 
@@ -15,27 +15,32 @@
         >
 
         <ImageView
+            android:clickable="true"
             android:id="@+id/iv_discover"
             style="@style/ImageViewItem"
             android:src="@drawable/discover_icon"
             />
 
         <ImageView
+            android:clickable="true"
             android:id="@+id/iv_maps"
             style="@style/ImageViewItem"
             android:src="@drawable/map"
             />
         <ImageView
+            android:clickable="true"
             android:id="@+id/iv_posts"
             style="@style/ImageViewItem"
             android:src="@drawable/my_post"
             />
         <ImageView
+            android:clickable="true"
             android:id="@+id/iv_request"
             style="@style/ImageViewItem"
             android:src="@drawable/request"
             />
         <ImageView
+            android:clickable="true"
             android:id="@+id/iv_network"
             style="@style/ImageViewItem"
             android:src="@drawable/my_network"
