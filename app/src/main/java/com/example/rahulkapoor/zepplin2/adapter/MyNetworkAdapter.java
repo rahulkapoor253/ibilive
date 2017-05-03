@@ -59,7 +59,7 @@ public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.Data
             holder.mRelativelayout.setBackgroundResource(R.drawable.network_bottom);
         }
 
-        holder.Username.setText(obj.getName());
+        holder.mUsername.setText(obj.getName());
 
 
     }
@@ -72,9 +72,20 @@ public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.Data
         return mItems.size();
     }
 
+    /**
+     * dummy method;
+     */
+    @Override
+    public void dummyInit() {
+
+    }
+
+    /**
+     * data holder inner class;
+     */
     public class DataHolder extends RecyclerView.ViewHolder {
 
-        private TextView Username;
+        private TextView mUsername;
         private RelativeLayout mRelativelayout;
 
         /**
@@ -82,7 +93,7 @@ public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.Data
          */
         public DataHolder(final View itemView) {
             super(itemView);
-            Username = (TextView) itemView.findViewById(R.id.tv_username);
+            mUsername = (TextView) itemView.findViewById(R.id.tv_username);
             mRelativelayout = (RelativeLayout) itemView.findViewById(R.id.rl_network);
 
         }

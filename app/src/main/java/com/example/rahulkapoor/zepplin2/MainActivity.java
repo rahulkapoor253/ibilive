@@ -52,7 +52,7 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
 
         mHamburger.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 mDrawer.openDrawer(Gravity.START);
 
             }
@@ -98,7 +98,7 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
      */
     private void init1() {
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.app_toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.app_toolbar);
         setSupportActionBar(mToolbar);
 
 
@@ -110,6 +110,11 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
     private void init2() {
         mDrawer = (DrawerLayout) findViewById(R.id.drawer);
         mHamburger = (ImageView) findViewById(R.id.iv_hamburger);
+
+    }
+
+    @Override
+    public void dummyInit() {
 
     }
 
@@ -165,6 +170,14 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
         public int getCount() {
             return 5;
 
+
+        }
+
+        /**
+         * dummy method;
+         */
+        @Override
+        public void dummyInit() {
 
         }
     }

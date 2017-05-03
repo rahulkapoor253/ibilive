@@ -22,14 +22,19 @@ import java.util.ArrayList;
 
 public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscoverPost.ViewHolder> implements AppConstants {
 
-    private static int MODE = -1;
+    private static int mMode = -1;
     private ArrayList<ListItems> mDataArrayList;
     private View itemView;
 
+    /**
+     *
+     * @param data arraylist;
+     * @param mode mode passed;
+     */
     public MyAdapterDiscoverPost(final ArrayList<ListItems> data, final int mode) {
         Log.d("log", "parametrized array list fired");
         this.mDataArrayList = data;
-        this.MODE = mode;
+        this.mMode = mode;
 
     }
 
@@ -42,12 +47,12 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
     @Override
     public ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
 
-        Log.d("log", "MODE = " + MODE);
+        Log.d("log", "MODE = " + mMode);
 
         itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_view, parent, false);
 
-        return new ViewHolder(itemView, MODE);
+        return new ViewHolder(itemView, mMode);
 
     }
 
@@ -74,6 +79,14 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
     public int getItemCount() {
 
         return mDataArrayList.size();
+    }
+
+    /**
+     * dummy method;
+     */
+    @Override
+    public void dummyInit() {
+
     }
 
     /**

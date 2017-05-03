@@ -25,37 +25,38 @@ public class RequestFragment extends Fragment {
     private ArrayList<ListItems> mDataArrayList;
     private MyReviewAdapter adapter;
 
+    /**
+     *
+     * @param inflater inflater
+     * @param container container
+     * @param savedInstanceState current instance is saved;
+     * @return view;
+     */
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.request_recyclerview, container, false);
 
-
-        setUp(view);
-        return view;
-    }
-
-    private void setUp(final View view) {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.header_recycler_view);
         mDataArrayList = new ArrayList<>();
 
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
 
         adapter = new MyReviewAdapter(mDataArrayList);
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
+        return view;
     }
-
 }

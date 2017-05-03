@@ -21,9 +21,15 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
     private View rootView;
     private GoogleMap mGoogleMap;
 
-
+    /**
+     *
+     * @param inflater infalter
+     * @param container container
+     * @param savedInstanceState current instance is saved;
+     * @return return view;
+     */
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager()
@@ -33,8 +39,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
         return rootView;
     }
 
+    /**
+     *
+     * @param googleMap googlemap;
+     */
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(final GoogleMap googleMap) {
         if (googleMap != null) {
             mGoogleMap = googleMap;
         }

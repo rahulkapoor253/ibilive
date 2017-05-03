@@ -28,7 +28,12 @@ public class MyPostFragment extends Fragment implements AppConstants {
     private String mCheck;
     private MyPostFragment frag;
 
-    public MyPostFragment newInstance(int val) {
+    /**
+     *
+     * @param val val
+     * @return return insatnce of the current fragment;
+     */
+    public MyPostFragment newInstance(final int val) {
 
         frag = new MyPostFragment();
         Bundle b = new Bundle();
@@ -39,6 +44,13 @@ public class MyPostFragment extends Fragment implements AppConstants {
         return frag;
     }
 
+    /**
+     *
+     * @param inflater inflater
+     * @param container conatiner
+     * @param savedInstanceState current instance is saved;
+     * @return view
+     */
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
@@ -52,23 +64,31 @@ public class MyPostFragment extends Fragment implements AppConstants {
 
         mDataArrayList = new ArrayList<>();
 
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
 
         adapter = new MyAdapterDiscoverPost(mDataArrayList, getArguments().getInt("POST_MODE"));
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
         return view;
+    }
+
+    /**
+     * dummy method;
+     */
+    @Override
+    public void dummyInit() {
+
     }
 }

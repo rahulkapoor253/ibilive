@@ -16,7 +16,9 @@ import com.example.rahulkapoor.zepplin2.model.ListItems;
 
 import java.util.ArrayList;
 
-
+/**
+ * fragment activity to be displayed first inside main activity;
+ */
 public class FragmentActivity extends Fragment implements AppConstants {
 
     private Toolbar mToolbar;
@@ -25,7 +27,11 @@ public class FragmentActivity extends Fragment implements AppConstants {
     private RecyclerView mRecyclerView;
     private FragmentActivity frag;
 
-
+    /**
+     *
+     * @param val val
+     * @return return object of current fragment;
+     */
     public FragmentActivity newInstance(final int val) {
 
         frag = new FragmentActivity();
@@ -37,6 +43,13 @@ public class FragmentActivity extends Fragment implements AppConstants {
         return frag;
     }
 
+    /**
+     *
+     * @param inflater inflater
+     * @param container container
+     * @param savedInstanceState current instance is saved;
+     * @return view;
+     */
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
@@ -47,23 +60,26 @@ public class FragmentActivity extends Fragment implements AppConstants {
         return view;
     }
 
-
+    /**
+     *
+     * @param view view
+     */
     private void setUp(final View view) {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mDataArrayList = new ArrayList<>();
 
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
-        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
+        mDataArrayList.add(new ListItems("Drake", "6d 2h left", "220", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n"
+                + "dolor sit amet, consectetur lorem ipsum."));
 
         adapter = new MyAdapterDiscoverPost(mDataArrayList, getArguments().getInt("DEFAULT_MODE"));
         mRecyclerView.setAdapter(adapter);
@@ -71,5 +87,11 @@ public class FragmentActivity extends Fragment implements AppConstants {
 
     }
 
+    /**
+     * dummy method;
+     */
+    @Override
+    public void dummyInit() {
 
+    }
 }

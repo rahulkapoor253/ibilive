@@ -67,6 +67,17 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
         return mDataArrayList.size();
     }
 
+    /**
+     * dummy method;
+     */
+    @Override
+    public void dummyInit() {
+
+    }
+
+    /**
+     * view holder inner class;
+     */
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mUsername;

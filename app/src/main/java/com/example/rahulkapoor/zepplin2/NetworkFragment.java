@@ -27,6 +27,13 @@ public class NetworkFragment extends Fragment implements AppConstants {
     private ArrayList<NetworkListItems> mItems;
 
 
+    /**
+     *
+     * @param inflater infalter
+     * @param container container
+     * @param savedInstanceState current instance is saved;
+     * @return returns view;
+     */
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
@@ -50,4 +57,11 @@ public class NetworkFragment extends Fragment implements AppConstants {
         return view;
     }
 
+    /**
+     * dummy method;
+     */
+    @Override
+    public void dummyInit() {
+
+    }
 }

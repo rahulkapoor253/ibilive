@@ -12,6 +12,13 @@ public class ListItems {
     private String mReviews;
     private String mLocation;
 
+    /**
+     *
+     * @param username username
+     * @param time time
+     * @param review reviews
+     * @param describe description
+     */
     public ListItems(final String username, final String time, final String review, final String describe) {
         this.mUsername = username;
         this.mDescribe = describe;
@@ -20,6 +27,12 @@ public class ListItems {
 
     }
 
+    /**
+     *
+     * @param username username
+     * @param time time
+     * @param describe description
+     */
     public ListItems(final String username, final String time, final String describe) {
         this.mUsername = username;
         this.mDescribe = describe;
@@ -27,21 +40,37 @@ public class ListItems {
 
     }
 
+    /**
+     *
+     * @return return username
+     */
     public String getmUsername() {
 
         return mUsername;
     }
 
+    /**
+     *
+     * @return return time
+     */
     public String getmTime() {
 
         return mTime;
     }
 
+    /**
+     *
+     * @return description
+     */
     public String getmDescribe() {
 
         return mDescribe;
     }
 
+    /**
+     *
+     * @return reviews;
+     */
     public String getmReviews() {
 
         return mReviews;
