@@ -10,12 +10,20 @@ public class ListItems {
     private String mDescribe;
     private String mTime;
     private String mReviews;
+    private String mLocation;
 
     public ListItems(final String username,final String time, final String review, final String describe){
         this.mUsername = username;
         this.mDescribe = describe;
         this.mTime = time;
         this.mReviews = review;
+
+    }
+
+    public ListItems(final String username, final String time, final String describe){
+        this.mUsername = username;
+        this.mDescribe = describe;
+        this.mTime = time;
 
     }
 

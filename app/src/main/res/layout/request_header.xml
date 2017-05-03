@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.1"
+    android:layout_marginStart="@dimen/sidemenu_margin_start"
+    android:layout_marginEnd="@dimen/sidemenu_margin_start"
+    android:layout_marginTop="@dimen/header_margin_top"
+    >
+
+    <TextView
+        style="@style/Header"
+        android:text="@string/header_post"
+        android:background="@drawable/request_post"
+        />
+    
+    <TextView
+        android:background="@drawable/request_map"
+        android:text="@string/map"
+        style="@style/Header" />
+
+
+    <TextView
+        android:background="@drawable/request_network"
+        android:text="@string/header_network"
+        style="@style/Header"
+        />
+
+    
+</LinearLayout>

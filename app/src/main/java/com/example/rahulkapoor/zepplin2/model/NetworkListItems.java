@@ -8,7 +8,7 @@ public class NetworkListItems {
 
     private String mName;
 
-    public NetworkListItems(String name){
+    public NetworkListItems(final String name){
 
         this.mName = name;
 

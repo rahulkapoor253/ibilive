@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.rahulkapoor.zepplin2.Constant.AppConstants;
 import com.example.rahulkapoor.zepplin2.adapter.MyAdapterDiscoverPost;
@@ -26,7 +27,7 @@ public class FragmentActivity extends Fragment implements AppConstants {
     private FragmentActivity frag;
 
 
-    public FragmentActivity newInstance(int val) {
+    public FragmentActivity newInstance(final int val) {
 
         frag = new FragmentActivity();
         Bundle b = new Bundle();
@@ -39,16 +40,17 @@ public class FragmentActivity extends Fragment implements AppConstants {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         setUp(view);
+
 
         return view;
     }
 
 
 
-    private void setUp(View view) {
+    private void setUp(final View view) {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mDataArrayList = new ArrayList<>();
 
@@ -70,6 +72,7 @@ public class FragmentActivity extends Fragment implements AppConstants {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
     }
+
 
 
 

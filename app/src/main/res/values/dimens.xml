@@ -15,5 +15,8 @@
     <dimen name="sidemenu_margin_start">15dp</dimen>
     <dimen name="image_size">50dp</dimen>
     <dimen name="button_width">100dp</dimen>
+    <dimen name="request_textsize">16sp</dimen>
+    <dimen name="request_margin">12dp</dimen>
+    <dimen name="header_margin_top">12dp</dimen>
 
 </resources>

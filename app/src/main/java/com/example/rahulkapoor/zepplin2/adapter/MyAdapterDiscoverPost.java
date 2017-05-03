@@ -26,7 +26,7 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
     private static int MODE = -1;
     private View itemView;
 
-    public MyAdapterDiscoverPost(ArrayList<ListItems> data, int mode){
+    public MyAdapterDiscoverPost(final ArrayList<ListItems> data, final int mode){
         Log.d("log", "parametrized array list fired");
         this.mDataArrayList = data;
         this.MODE = mode;
@@ -34,9 +34,14 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
     }
 
 
-
+    /**
+     *
+     * @param parent parent
+     * @param viewType view
+     * @return return viewholder object;
+     */
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
 
         Log.d("log", "MODE = " + MODE);
 
@@ -47,8 +52,13 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
 
     }
 
+    /**
+     *
+     * @param holder holder
+     * @param position pos
+     */
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
 
             ListItems obj = mDataArrayList.get(position);
 
@@ -59,12 +69,19 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
 
     }
 
+    /**
+     *
+     * @return array size
+     */
     @Override
     public int getItemCount() {
 
         return mDataArrayList.size();
         }
 
+    /**
+     * view holder class
+     */
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mDescription;
@@ -75,26 +92,43 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
         private ImageView mEdit, mBin, mLocator, mIcon ;
         private RatingBar mRatingBar;
 
-        public ViewHolder(View itemView,int val) {
+        /**
+         *
+         * @param itemView item view
+         * @param val mode
+         */
+        public ViewHolder(final View itemView, final int val) {
             super(itemView);
 
             init();
 
-            if(val == DEFAULT_MODE) {
-                mSwitch.setVisibility(View.GONE);
-                mEdit.setVisibility(View.GONE);
-                mBin.setVisibility(View.GONE);
-            }
-
-           else if(val == POST_MODE){
+            if(val == POST_MODE){
+                mSwitch.setVisibility(View.VISIBLE);
+                mEdit.setVisibility(View.VISIBLE);
+                mBin.setVisibility(View.VISIBLE);
                 mIcon.setVisibility(View.INVISIBLE);
                 mLocator.setVisibility(View.GONE);
                 mUsername.setVisibility(View.INVISIBLE);
                 mRatingBar.setVisibility(View.INVISIBLE);
             }
 
+            else {
+                mIcon.setVisibility(View.VISIBLE);
+                mLocator.setVisibility(View.VISIBLE);
+                mUsername.setVisibility(View.VISIBLE);
+                mRatingBar.setVisibility(View.VISIBLE);
+                mSwitch.setVisibility(View.GONE);
+                mEdit.setVisibility(View.GONE);
+                mBin.setVisibility(View.GONE);
+            }
+
+
+
         }
 
+        /**
+         * initialising;
+         */
         private void init(){
             mRatingBar = (RatingBar) itemView.findViewById(R.id.rating_bar);
             mUsername = (TextView) itemView.findViewById(R.id.tv_username);

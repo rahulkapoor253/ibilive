@@ -7,7 +7,26 @@
     android:orientation="vertical"
     tools:context="com.example.rahulkapoor.zepplin2.FragmentActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <include
+            layout="@layout/search_bar"
+            />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/margin_start_end"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/info_icon"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

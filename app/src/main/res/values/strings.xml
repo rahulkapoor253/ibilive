@@ -26,5 +26,16 @@
 
     <string name="connectbtn">Connect</string>
 
+    <string name="user_location">dummy location</string>
+    <string name="show_map">Show on map</string>
+
+    <string name="btn_accept">Accept</string>
+    <string name="btn_reject">Reject</string>
+
+    <string name="API_key">AIzaSyAICrmjA_ZSevgby_flq17x5XGdHRnBymc</string>
+
+    <string name="header_post">Post</string>
+<string name="header_maps">Map</string>
+    <string name="header_network">Network</string>
 
 </resources>

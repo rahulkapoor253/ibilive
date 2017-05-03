@@ -1,5 +1,6 @@
 package com.example.rahulkapoor.zepplin2;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -16,7 +17,7 @@ import android.widget.ImageView;
 
 import com.example.rahulkapoor.zepplin2.Constant.AppConstants;
 
-public class MainActivity extends ActionBarActivity implements AppConstants {
+public class MainActivity extends ActionBarActivity implements AppConstants, View.OnClickListener{
 
     private ImageView mHamburger;
     private DrawerLayout mDrawer;
@@ -25,6 +26,7 @@ public class MainActivity extends ActionBarActivity implements AppConstants {
     private Toolbar mToolbar;
     private ViewPager mViewPager;
     private FragmentPagerAdapter mAdapterViewPager;
+    private Intent intent;
 
     private ImageView mDiscover, mMap, mPost, mRequest, mNetwork;
 
@@ -35,9 +37,9 @@ public class MainActivity extends ActionBarActivity implements AppConstants {
         init1();
 
         mViewPager = (ViewPager) findViewById(R.id.fm_view_pager);
+        mViewPager.setOffscreenPageLimit(5);
         mAdapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mAdapterViewPager);
-
 
         init2();
 
@@ -52,8 +54,35 @@ public class MainActivity extends ActionBarActivity implements AppConstants {
 
 
 
-
     }
+
+        @Override
+        public void onClick(final View v) {
+            int position;
+            switch (v.getId()) {
+
+                case R.id.iv_discover:
+                    position = 0;
+                    break;
+                case R.id.iv_maps:
+                    position = 1;
+                    break;
+                case R.id.iv_posts:
+                    position = 2;
+                    break;
+                case R.id.iv_request:
+                    position = 3;
+                    break;
+                case R.id.iv_network:
+                    position = 4;
+                    break;
+                default:
+                    position = 0;
+
+            }
+
+            mViewPager.setCurrentItem(position);
+        }
 
 
 
@@ -68,14 +97,10 @@ public class MainActivity extends ActionBarActivity implements AppConstants {
     private void init2(){
         mDrawer = (DrawerLayout) findViewById(R.id.drawer);
         mHamburger = (ImageView) findViewById(R.id.iv_hamburger);
-        mDiscover = (ImageView) findViewById(R.id.iv_discover);
-        mMap = (ImageView) findViewById(R.id.iv_maps);
-        mRequest = (ImageView) findViewById(R.id.iv_request);
-        mNetwork = (ImageView) findViewById(R.id.iv_network);
-        mPost = (ImageView) findViewById(R.id.iv_posts);
-
 
     }
+
+
 
     private class MyPagerAdapter extends FragmentPagerAdapter implements AppConstants {
 
@@ -91,23 +116,32 @@ public class MainActivity extends ActionBarActivity implements AppConstants {
                     Log.d("log", "position : " + position);
                     return new FragmentActivity().newInstance(DEFAULT_MODE);
                 case 1:
-                    Log.d("log", "position : " + position);
-                    return new MyPostFragment().newInstance(POST_MODE);
+                    Log.d("log", "position :" + position);
+                    return new MapsFragment();
                 case 2:
                     Log.d("log", "position : " + position);
+                    return new MyPostFragment().newInstance(POST_MODE);
+                case 3:
+                    Log.d("log", "position : " + position);
+                    return new RequestFragment();
+                case 4:
+                    Log.d("log", "position : " + position);
                     return new NetworkFragment();
-
                 default:
                     Log.d("log", "position is null");
-                    return null;
+                    return new FragmentActivity().newInstance(DEFAULT_MODE);
 
             }
 
         }
 
+
+
+
+
         @Override
         public int getCount() {
-            return 3;
+            return 5;
 
 
         }

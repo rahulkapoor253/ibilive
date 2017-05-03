@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#d8d8d8"
+    android:background="@android:color/white"
     android:orientation="vertical"
-
+android:layout_marginStart="@dimen/sidemenu_margin_start"
+    android:layout_marginEnd="@dimen/sidemenu_margin_end"
     >
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/sidemenu_margin_end"
-        android:layout_marginStart="@dimen/sidemenu_margin_end"
-        android:background="@drawable/round_box"
-        android:orientation="vertical">
-
         <RelativeLayout
+            android:id="@+id/rl_network"
+            android:background="@drawable/network_other"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -87,7 +82,6 @@
 
         </RelativeLayout>
 
-    </FrameLayout>
 
 
 </LinearLayout>
