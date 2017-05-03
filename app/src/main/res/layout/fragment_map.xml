@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:weightSum="1"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+    android:layout_weight="0.2"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+    <include
+        layout="@layout/header_map"/>
+
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/sidemenu_margin_start"
+            android:layout_marginEnd="@dimen/sidemenu_margin_start"
+            android:background="@drawable/map_round_box"
+            android:text="Guide \nMe"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="26sp"
+            />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/google_map"
@@ -9,4 +42,9 @@
         android:layout_height="match_parent"
         />
 
-</LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
