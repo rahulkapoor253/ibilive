@@ -11,8 +11,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.rahulkapoor.zepplin2.Constant.AppConstants;
-import com.example.rahulkapoor.zepplin2.model.ListItems;
 import com.example.rahulkapoor.zepplin2.R;
+import com.example.rahulkapoor.zepplin2.model.ListItems;
 
 import java.util.ArrayList;
 
@@ -22,11 +22,11 @@ import java.util.ArrayList;
 
 public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscoverPost.ViewHolder> implements AppConstants {
 
-    private ArrayList<ListItems> mDataArrayList;
     private static int MODE = -1;
+    private ArrayList<ListItems> mDataArrayList;
     private View itemView;
 
-    public MyAdapterDiscoverPost(final ArrayList<ListItems> data, final int mode){
+    public MyAdapterDiscoverPost(final ArrayList<ListItems> data, final int mode) {
         Log.d("log", "parametrized array list fired");
         this.mDataArrayList = data;
         this.MODE = mode;
@@ -35,8 +35,7 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
 
 
     /**
-     *
-     * @param parent parent
+     * @param parent   parent
      * @param viewType view
      * @return return viewholder object;
      */
@@ -53,31 +52,29 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
     }
 
     /**
-     *
-     * @param holder holder
+     * @param holder   holder
      * @param position pos
      */
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
-            ListItems obj = mDataArrayList.get(position);
+        ListItems obj = mDataArrayList.get(position);
 
-            holder.mUsername.setText(obj.getmUsername());
-            holder.mReviews.setText(obj.getmReviews());
-            holder.mTime.setText(obj.getmTime());
-            holder.mDescription.setText(obj.getmDescribe());
+        holder.mUsername.setText(obj.getmUsername());
+        holder.mReviews.setText(obj.getmReviews());
+        holder.mTime.setText(obj.getmTime());
+        holder.mDescription.setText(obj.getmDescribe());
 
     }
 
     /**
-     *
      * @return array size
      */
     @Override
     public int getItemCount() {
 
         return mDataArrayList.size();
-        }
+    }
 
     /**
      * view holder class
@@ -89,20 +86,19 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
         private TextView mReviews;
         private TextView mUsername;
         private Switch mSwitch;
-        private ImageView mEdit, mBin, mLocator, mIcon ;
+        private ImageView mEdit, mBin, mLocator, mIcon;
         private RatingBar mRatingBar;
 
         /**
-         *
          * @param itemView item view
-         * @param val mode
+         * @param val      mode
          */
         public ViewHolder(final View itemView, final int val) {
             super(itemView);
 
             init();
 
-            if(val == POST_MODE){
+            if (val == POST_MODE) {
                 mSwitch.setVisibility(View.VISIBLE);
                 mEdit.setVisibility(View.VISIBLE);
                 mBin.setVisibility(View.VISIBLE);
@@ -110,9 +106,7 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
                 mLocator.setVisibility(View.GONE);
                 mUsername.setVisibility(View.INVISIBLE);
                 mRatingBar.setVisibility(View.INVISIBLE);
-            }
-
-            else {
+            } else {
                 mIcon.setVisibility(View.VISIBLE);
                 mLocator.setVisibility(View.VISIBLE);
                 mUsername.setVisibility(View.VISIBLE);
@@ -123,13 +117,12 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
             }
 
 
-
         }
 
         /**
          * initialising;
          */
-        private void init(){
+        private void init() {
             mRatingBar = (RatingBar) itemView.findViewById(R.id.rating_bar);
             mUsername = (TextView) itemView.findViewById(R.id.tv_username);
             mDescription = (TextView) itemView.findViewById(R.id.et_user_describe);
@@ -142,7 +135,6 @@ public class MyAdapterDiscoverPost extends RecyclerView.Adapter<MyAdapterDiscove
             mIcon = (ImageView) itemView.findViewById(R.id.iv_icon);
 
         }
-
 
 
     }

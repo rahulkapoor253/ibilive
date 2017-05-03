@@ -18,21 +18,19 @@ import java.util.ArrayList;
 
 public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHolder> implements AppConstants {
 
-   private View itemView;
+    private View itemView;
     private ArrayList<ListItems> mDataArrayList;
 
     /**
-     *
      * @param data arraylist;
      */
-    public MyReviewAdapter(final ArrayList<ListItems> data){
+    public MyReviewAdapter(final ArrayList<ListItems> data) {
         this.mDataArrayList = data;
 
     }
 
     /**
-     *
-     * @param parent parent
+     * @param parent   parent
      * @param viewType viewtype
      * @return view holder object
      */
@@ -46,8 +44,7 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
     }
 
     /**
-     *
-     * @param holder holder
+     * @param holder   holder
      * @param position position
      */
     @Override
@@ -63,7 +60,6 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
     }
 
     /**
-     *
      * @return arraylist size
      */
     @Override
@@ -79,13 +75,12 @@ public class MyReviewAdapter extends RecyclerView.Adapter<MyReviewAdapter.ViewHo
         private TextView mName;
 
         /**
-         *
          * @param itemView current itemview;
          */
         public ViewHolder(final View itemView) {
             super(itemView);
-        mName = (TextView) itemView.findViewById(R.id.tv_request_username);
-        mUsername = (TextView) itemView.findViewById(R.id.request_username);
+            mName = (TextView) itemView.findViewById(R.id.tv_request_username);
+            mUsername = (TextView) itemView.findViewById(R.id.request_username);
             mDescribe = (TextView) itemView.findViewById(R.id.request_description);
             mTime = (TextView) itemView.findViewById(R.id.request_time);
         }

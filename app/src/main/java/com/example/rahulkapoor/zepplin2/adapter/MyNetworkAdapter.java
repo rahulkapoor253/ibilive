@@ -1,7 +1,5 @@
 package com.example.rahulkapoor.zepplin2.adapter;
 
-import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,17 +23,15 @@ public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.Data
     private ArrayList<NetworkListItems> mItems;
 
     /**
-     *
      * @param data arraylist
      */
     public MyNetworkAdapter(final ArrayList<NetworkListItems> data) {
-    this.mItems = data;
+        this.mItems = data;
 
-}
+    }
 
     /**
-     *
-     * @param parent parent
+     * @param parent   parent
      * @param viewType viewtype
      * @return return data holder object;
      */
@@ -49,29 +45,26 @@ public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.Data
     }
 
     /**
-     *
-     * @param holder holder
+     * @param holder   holder
      * @param position position
      */
     @Override
     public void onBindViewHolder(final MyNetworkAdapter.DataHolder holder, final int position) {
 
         NetworkListItems obj = mItems.get(position);
-        if(position == 0){
+        if (position == 0) {
             holder.mRelativelayout.setBackgroundResource(R.drawable.network_top);
 
-        }
-        else if(position == mItems.size()-1){
+        } else if (position == mItems.size() - 1) {
             holder.mRelativelayout.setBackgroundResource(R.drawable.network_bottom);
         }
 
-            holder.Username.setText(obj.getName());
+        holder.Username.setText(obj.getName());
 
 
     }
 
     /**
-     *
      * @return arraylist size
      */
     @Override
@@ -85,7 +78,6 @@ public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.Data
         private RelativeLayout mRelativelayout;
 
         /**
-         *
          * @param itemView current itemview;
          */
         public DataHolder(final View itemView) {

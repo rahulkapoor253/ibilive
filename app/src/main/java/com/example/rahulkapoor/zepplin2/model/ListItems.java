@@ -12,7 +12,7 @@ public class ListItems {
     private String mReviews;
     private String mLocation;
 
-    public ListItems(final String username,final String time, final String review, final String describe){
+    public ListItems(final String username, final String time, final String review, final String describe) {
         this.mUsername = username;
         this.mDescribe = describe;
         this.mTime = time;
@@ -20,29 +20,29 @@ public class ListItems {
 
     }
 
-    public ListItems(final String username, final String time, final String describe){
+    public ListItems(final String username, final String time, final String describe) {
         this.mUsername = username;
         this.mDescribe = describe;
         this.mTime = time;
 
     }
 
-    public String getmUsername(){
+    public String getmUsername() {
 
         return mUsername;
     }
 
-    public String getmTime(){
+    public String getmTime() {
 
         return mTime;
     }
 
-    public String getmDescribe(){
+    public String getmDescribe() {
 
         return mDescribe;
     }
 
-    public String getmReviews(){
+    public String getmReviews() {
 
         return mReviews;
     }

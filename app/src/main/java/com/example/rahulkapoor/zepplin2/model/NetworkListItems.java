@@ -8,13 +8,13 @@ public class NetworkListItems {
 
     private String mName;
 
-    public NetworkListItems(final String name){
+    public NetworkListItems(final String name) {
 
         this.mName = name;
 
     }
 
-    public String getName(){
+    public String getName() {
 
         return mName;
     }

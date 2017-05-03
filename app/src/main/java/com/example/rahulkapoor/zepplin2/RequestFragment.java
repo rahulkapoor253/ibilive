@@ -5,14 +5,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.TextView;
 
-import com.example.rahulkapoor.zepplin2.adapter.MyAdapterDiscoverPost;
 import com.example.rahulkapoor.zepplin2.adapter.MyReviewAdapter;
 import com.example.rahulkapoor.zepplin2.model.ListItems;
 
@@ -35,7 +31,6 @@ public class RequestFragment extends Fragment {
         view = inflater.inflate(R.layout.request_recyclerview, container, false);
 
 
-
         setUp(view);
         return view;
     }
@@ -45,17 +40,17 @@ public class RequestFragment extends Fragment {
         mDataArrayList = new ArrayList<>();
 
         mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum." ));
+                "dolor sit amet, consectetur lorem ipsum."));
         mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum." ));
+                "dolor sit amet, consectetur lorem ipsum."));
         mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum." ));
+                "dolor sit amet, consectetur lorem ipsum."));
         mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum." ));
+                "dolor sit amet, consectetur lorem ipsum."));
         mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum." ));
+                "dolor sit amet, consectetur lorem ipsum."));
         mDataArrayList.add(new ListItems("Drake", "6d 2h left", "Lorem ipsum dolor sit amet, consectetur lorem ipsum \n" +
-                "dolor sit amet, consectetur lorem ipsum." ));
+                "dolor sit amet, consectetur lorem ipsum."));
 
         adapter = new MyReviewAdapter(mDataArrayList);
         mRecyclerView.setAdapter(adapter);

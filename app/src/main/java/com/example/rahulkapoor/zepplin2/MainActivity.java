@@ -1,6 +1,7 @@
 package com.example.rahulkapoor.zepplin2;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -8,7 +9,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -17,7 +17,10 @@ import android.widget.ImageView;
 
 import com.example.rahulkapoor.zepplin2.Constant.AppConstants;
 
-public class MainActivity extends ActionBarActivity implements AppConstants, View.OnClickListener{
+/**
+ * main activity holds view pager and its adapter;
+ */
+public class MainActivity extends ActionBarActivity implements AppConstants, View.OnClickListener {
 
     private ImageView mHamburger;
     private DrawerLayout mDrawer;
@@ -30,8 +33,11 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
 
     private ImageView mDiscover, mMap, mPost, mRequest, mNetwork;
 
+    /**
+     * @param savedInstanceState state of instance is saved;
+     */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init1();
@@ -53,65 +59,81 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
         });
 
 
-
     }
 
-        @Override
-        public void onClick(final View v) {
-            int position;
-            switch (v.getId()) {
+    /**
+     * @param v view
+     */
+    @Override
+    public void onClick(final View v) {
+        int position;
+        switch (v.getId()) {
 
-                case R.id.iv_discover:
-                    position = 0;
-                    break;
-                case R.id.iv_maps:
-                    position = 1;
-                    break;
-                case R.id.iv_posts:
-                    position = 2;
-                    break;
-                case R.id.iv_request:
-                    position = 3;
-                    break;
-                case R.id.iv_network:
-                    position = 4;
-                    break;
-                default:
-                    position = 0;
+            case R.id.iv_discover:
+                position = 0;
+                break;
+            case R.id.iv_maps:
+                position = 1;
+                break;
+            case R.id.iv_posts:
+                position = 2;
+                break;
+            case R.id.iv_request:
+                position = 3;
+                break;
+            case R.id.iv_network:
+                position = 4;
+                break;
+            default:
+                position = 0;
 
-            }
-
-            mViewPager.setCurrentItem(position);
         }
 
+        mViewPager.setCurrentItem(position);
+    }
 
 
+    /**
+     * initialise 1;
+     */
     private void init1() {
 
-        Toolbar mToolbar= (Toolbar) findViewById(R.id.app_toolbar);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.app_toolbar);
         setSupportActionBar(mToolbar);
 
 
     }
 
-    private void init2(){
+    /**
+     * init 2
+     */
+    private void init2() {
         mDrawer = (DrawerLayout) findViewById(R.id.drawer);
         mHamburger = (ImageView) findViewById(R.id.iv_hamburger);
 
     }
 
 
-
+    /**
+     * pager adapter inner class
+     */
     private class MyPagerAdapter extends FragmentPagerAdapter implements AppConstants {
 
-        public MyPagerAdapter(FragmentManager fm){
+        /**
+         * @param fm fragment maanger
+         */
+        public MyPagerAdapter(final FragmentManager fm) {
             super(fm);
         }
 
+        /**
+         * @param position position
+         * @return return fragment instance;
+         */
         @Override
-        public Fragment getItem(int position) {
+        public Fragment getItem(final int position) {
 
-            switch (position){
+            switch (position) {
                 case 0:
                     Log.d("log", "position : " + position);
                     return new FragmentActivity().newInstance(DEFAULT_MODE);
@@ -136,9 +158,9 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
         }
 
 
-
-
-
+        /**
+         * @return no of slider pages;
+         */
         @Override
         public int getCount() {
             return 5;
@@ -146,7 +168,6 @@ public class MainActivity extends ActionBarActivity implements AppConstants, Vie
 
         }
     }
-
 
 
 }

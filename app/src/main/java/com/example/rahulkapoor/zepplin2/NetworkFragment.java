@@ -6,14 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.rahulkapoor.zepplin2.Constant.AppConstants;
-import com.example.rahulkapoor.zepplin2.adapter.MyAdapterDiscoverPost;
 import com.example.rahulkapoor.zepplin2.adapter.MyNetworkAdapter;
 import com.example.rahulkapoor.zepplin2.model.NetworkListItems;
 

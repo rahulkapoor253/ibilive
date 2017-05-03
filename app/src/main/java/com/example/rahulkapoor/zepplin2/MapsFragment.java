@@ -1,9 +1,8 @@
 package com.example.rahulkapoor.zepplin2;
 
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,13 +29,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager()
                 .findFragmentById(R.id.google_map);
 
-        
-return rootView;
+
+        return rootView;
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        if(googleMap != null){
+        if (googleMap != null) {
             mGoogleMap = googleMap;
         }
 
